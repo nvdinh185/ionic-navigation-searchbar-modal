@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { NavigationPage } from '../navigation/navigation';
 import { SearchbarsPage } from '../searchbars/searchbars';
 import { ModalPage } from '../modal/modal';
@@ -9,17 +9,21 @@ import { ModalPage } from '../modal/modal';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams) { }
 
-  navigation(){
+  ngOnInit() {
+    console.log(this.navParams.data);
+  }
+
+  navigation() {
     this.navCtrl.push(NavigationPage)
   }
 
-  searchbars(){
+  searchbars() {
     this.navCtrl.push(SearchbarsPage)
   }
 
-  modal(){
+  modal() {
     this.navCtrl.push(ModalPage)
   }
 

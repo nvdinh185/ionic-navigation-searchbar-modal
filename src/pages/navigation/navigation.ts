@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HomePage } from '../home/home';
 
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -16,7 +17,7 @@ export class NavigationDetailsPage {
 }
 
 @Component({
-  template: `
+  templateUrl: 'navigation.html' /* `
 <ion-header>
   <ion-navbar>
     <ion-title>Navigation</ion-title>
@@ -31,11 +32,12 @@ export class NavigationDetailsPage {
     </button>
   </ion-list>
 </ion-content>
-`
+` */
 })
 
 export class NavigationPage {
   items = [];
+  public HomePage = HomePage;
 
   constructor(public nav: NavController) {
     this.items = [

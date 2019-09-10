@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-navbar>
     <ion-title>Navigation2</ion-title>
@@ -12,4 +11,6 @@
       {{ item.title }}
     </button>
   </ion-list>
+  <button ion-button [navPush]="HomePage" [navParams]="123">Navigation Home</button>
+  <button ion-button navPop>Pop To Home</button>
 </ion-content>
